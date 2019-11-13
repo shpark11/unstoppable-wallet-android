@@ -17,7 +17,7 @@ class SendEthereumHandler(private val interactor: SendModule.ISendEthereumIntera
     private fun syncValidation() {
         try {
             amountModule.validAmount()
-            addressModule.validAddress()
+            addressModule.validateAddress()
 
             delegate.onChange(true)
 

@@ -36,7 +36,11 @@ object SendAddressModule {
         val currentAddress: String?
 
         @Throws
+        fun validateAddress()
+
+        @Throws
         fun validAddress(): String
+
         fun didScanQrCode(address: String)
     }
 

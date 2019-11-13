@@ -17,7 +17,7 @@ class SendDashHandler(private val interactor: SendModule.ISendDashInteractor,
     private fun syncValidation() {
         try {
             amountModule.validAmount()
-            addressModule.validAddress()
+            addressModule.validateAddress()
 
             delegate.onChange(true)
 

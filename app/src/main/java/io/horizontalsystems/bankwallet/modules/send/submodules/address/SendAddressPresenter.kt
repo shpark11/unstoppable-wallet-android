@@ -10,29 +10,26 @@ class SendAddressPresenter(val view: SendAddressModule.IView,
     var moduleDelegate: SendAddressModule.IAddressModuleDelegate? = null
 
     private var enteredAddress: String? = null
+    override var currentAddress: String? = null
 
-    override val currentAddress: String?
-        get() = try {
-            validAddress()
-        } catch (e: Exception) {
-            null
-        }
-
-    override fun validAddress(): String {
+    override fun validateAddress() {
         val address = enteredAddress ?: throw SendAddressModule.ValidationError.InvalidAddress()
 
         try {
             moduleDelegate?.validate(address)
-
+            currentAddress = address
             view.setAddress(address)
             view.setAddressError(null)
         } catch (e: Exception) {
+            currentAddress = null
             view.setAddress(address)
             view.setAddressError(e)
             throw e
         }
+    }
 
-        return address
+    override fun validAddress() : String {
+        return enteredAddress ?: throw SendAddressModule.ValidationError.InvalidAddress()
     }
 
     override fun didScanQrCode(address: String) {
@@ -70,7 +67,7 @@ class SendAddressPresenter(val view: SendAddressModule.IView,
         enteredAddress = parsedAddress
 
         try {
-            validAddress()
+            validateAddress()
         } catch (e: Exception) {
         }
 

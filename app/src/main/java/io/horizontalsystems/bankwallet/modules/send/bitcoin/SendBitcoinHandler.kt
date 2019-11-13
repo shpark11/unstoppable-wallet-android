@@ -20,7 +20,7 @@ class SendBitcoinHandler(private val interactor: SendModule.ISendBitcoinInteract
     private fun syncValidation() {
         try {
             amountModule.validAmount()
-            addressModule.validAddress()
+            addressModule.validateAddress()
 
             delegate.onChange(true)
 

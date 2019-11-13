@@ -16,7 +16,7 @@ class SendBinanceHandler(private val interactor: SendModule.ISendBinanceInteract
     private fun syncValidation() {
         try {
             amountModule.validAmount()
-            addressModule.validAddress()
+            addressModule.validateAddress()
 
             delegate.onChange(true)
 
