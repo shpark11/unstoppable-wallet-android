@@ -40,106 +40,106 @@ class MainSettingsFragment : Fragment() {
 
         bindViewListeners(presenter)
 
-        subscribeToViewEvents(presenterView, presenter)
+//        subscribeToViewEvents(presenterView, presenter)
 
         subscribeToRouterEvents(router)
 
         presenter.viewDidLoad()
 
         //currently language setting is not working on API 23, 24, 25
-        language.visibility = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) View.VISIBLE else View.GONE
+//        language.visibility = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) View.VISIBLE else View.GONE
     }
 
     private fun bindViewListeners(presenter: MainSettingsPresenter) {
         securityCenter.setOnClickListener { presenter.didTapSecurity() }
 
-        notifications.setOnClickListener { presenter.didTapNotifications() }
-
-        manageCoins.setOnClickListener { presenter.didManageCoins() }
-
-        experimentalFeatures.setOnClickListener { presenter.didTapExperimentalFeatures() }
-
-        baseCurrency.setOnClickListener { presenter.didTapBaseCurrency() }
-
-        language.setOnClickListener { presenter.didTapLanguage() }
-
-        lightMode.setOnClickListener { lightMode.switchToggle() }
-
-        about.setOnClickListener { presenter.didTapAbout() }
-
-        report.setOnClickListener { presenter.didTapReportProblem() }
-
-        shareApp.setOnClickListener { presenter.didTapTellFriends() }
-
-        companyLogo.setOnClickListener { presenter.didTapCompanyLogo() }
+//        notifications.setOnClickListener { presenter.didTapNotifications() }
+//
+//        manageCoins.setOnClickListener { presenter.didManageCoins() }
+//
+//        experimentalFeatures.setOnClickListener { presenter.didTapExperimentalFeatures() }
+//
+//        baseCurrency.setOnClickListener { presenter.didTapBaseCurrency() }
+//
+//        language.setOnClickListener { presenter.didTapLanguage() }
+//
+//        lightMode.setOnClickListener { lightMode.switchToggle() }
+//
+//        about.setOnClickListener { presenter.didTapAbout() }
+//
+//        report.setOnClickListener { presenter.didTapReportProblem() }
+//
+//        shareApp.setOnClickListener { presenter.didTapTellFriends() }
+//
+//        companyLogo.setOnClickListener { presenter.didTapCompanyLogo() }
     }
 
-    private fun subscribeToViewEvents(presenterView: MainSettingsView, presenter: MainSettingsPresenter) {
-        presenterView.baseCurrency.observe(viewLifecycleOwner, Observer { currency ->
-            currency?.let {
-                baseCurrency.rightTitle = it
-            }
-        })
-
-        presenterView.backedUp.observe(viewLifecycleOwner, Observer { wordListBackedUp ->
-            securityCenter.badgeImage = !wordListBackedUp
-        })
-
-        presenterView.language.observe(viewLifecycleOwner, Observer { languageCode ->
-            languageCode?.let {
-                language.rightTitle = it
-            }
-        })
-
-        presenterView.lightMode.observe(viewLifecycleOwner, Observer { lightModeValue ->
-            lightModeValue?.let {
-                lightMode.apply {
-                    switchIsChecked = it
-
-                    switchOnCheckedChangeListener = CompoundButton.OnCheckedChangeListener { _, isChecked ->
-                        presenter.didSwitchLightMode(isChecked)
-                    }
-                }
-            }
-        })
-
-        presenterView.appVersion.observe(viewLifecycleOwner, Observer { version ->
-            version?.let {
-                var appVersion = getString(R.string.Settings_InfoTitleWithVersion, it)
-                if (getString(R.string.is_release) == "false") {
-                    appVersion = "$appVersion (${BuildConfig.VERSION_CODE})"
-                }
-                appName.text = appVersion
-            }
-        })
-    }
+//    private fun subscribeToViewEvents(presenterView: MainSettingsView, presenter: MainSettingsPresenter) {
+//        presenterView.baseCurrency.observe(viewLifecycleOwner, Observer { currency ->
+//            currency?.let {
+//                baseCurrency.rightTitle = it
+//            }
+//        })
+//
+//        presenterView.backedUp.observe(viewLifecycleOwner, Observer { wordListBackedUp ->
+//            securityCenter.badgeImage = !wordListBackedUp
+//        })
+//
+//        presenterView.language.observe(viewLifecycleOwner, Observer { languageCode ->
+//            languageCode?.let {
+//                language.rightTitle = it
+//            }
+//        })
+//
+//        presenterView.lightMode.observe(viewLifecycleOwner, Observer { lightModeValue ->
+//            lightModeValue?.let {
+//                lightMode.apply {
+//                    switchIsChecked = it
+//
+//                    switchOnCheckedChangeListener = CompoundButton.OnCheckedChangeListener { _, isChecked ->
+//                        presenter.didSwitchLightMode(isChecked)
+//                    }
+//                }
+//            }
+//        })
+//
+//        presenterView.appVersion.observe(viewLifecycleOwner, Observer { version ->
+//            version?.let {
+//                var appVersion = getString(R.string.Settings_InfoTitleWithVersion, it)
+//                if (getString(R.string.is_release) == "false") {
+//                    appVersion = "$appVersion (${BuildConfig.VERSION_CODE})"
+//                }
+//                appName.text = appVersion
+//            }
+//        })
+//    }
 
     private fun subscribeToRouterEvents(router: MainSettingsRouter) {
-        router.showBaseCurrencySettingsLiveEvent.observe(viewLifecycleOwner, Observer {
-            context?.let { context -> BaseCurrencySettingsModule.start(context) }
-        })
-
-        router.showLanguageSettingsLiveEvent.observe(viewLifecycleOwner, Observer {
-            context?.let { context -> LanguageSettingsModule.start(context) }
-        })
-
-        router.showAboutLiveEvent.observe(viewLifecycleOwner, Observer {
-            activity?.let {
-                AboutSettingsActivity.start(it)
-            }
-        })
-
-        router.showNotificationsLiveEvent.observe(viewLifecycleOwner, Observer {
-            activity?.let {
-                NotificationsModule.start(it)
-            }
-        })
-
-        router.showReportProblemLiveEvent.observe(viewLifecycleOwner, Observer {
-            activity?.let {
-                ReportProblemModule.start(it)
-            }
-        })
+//        router.showBaseCurrencySettingsLiveEvent.observe(viewLifecycleOwner, Observer {
+//            context?.let { context -> BaseCurrencySettingsModule.start(context) }
+//        })
+//
+//        router.showLanguageSettingsLiveEvent.observe(viewLifecycleOwner, Observer {
+//            context?.let { context -> LanguageSettingsModule.start(context) }
+//        })
+//
+//        router.showAboutLiveEvent.observe(viewLifecycleOwner, Observer {
+//            activity?.let {
+//                AboutSettingsActivity.start(it)
+//            }
+//        })
+//
+//        router.showNotificationsLiveEvent.observe(viewLifecycleOwner, Observer {
+//            activity?.let {
+//                NotificationsModule.start(it)
+//            }
+//        })
+//
+//        router.showReportProblemLiveEvent.observe(viewLifecycleOwner, Observer {
+//            activity?.let {
+//                ReportProblemModule.start(it)
+//            }
+//        })
 
         router.showSecuritySettingsLiveEvent.observe(viewLifecycleOwner, Observer {
             context?.let {
@@ -147,30 +147,30 @@ class MainSettingsFragment : Fragment() {
             }
         })
 
-        router.showManageCoinsLiveEvent.observe(viewLifecycleOwner, Observer {
-            context?.let { ManageWalletsModule.start(it) }
-        })
-
-        router.showExperimentalFeaturesLiveEvent.observe(viewLifecycleOwner, Observer {
-            activity?.let { ExperimentalFeaturesModule.start(it) }
-        })
-
-        router.openLinkLiveEvent.observe(viewLifecycleOwner, Observer { link ->
-            val uri = Uri.parse(link)
-            val intent = Intent(Intent.ACTION_VIEW, uri)
-            activity?.startActivity(intent)
-        })
-
-        router.shareAppLiveEvent.observe(viewLifecycleOwner, Observer { appWebPageLink ->
-            val shareMessage = getString(R.string.SettingsShare_Text) + "\n" + appWebPageLink + "\n"
-            val shareIntent = Intent(Intent.ACTION_SEND)
-            shareIntent.type = "text/plain"
-            shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage)
-            startActivity(Intent.createChooser(shareIntent, getString(R.string.SettingsShare_Title)))
-        })
-
-        router.reloadAppLiveEvent.observe(viewLifecycleOwner, Observer {
-            activity?.let { MainModule.startAsNewTask(it, MainActivity.SETTINGS_TAB_POSITION) }
-        })
+//        router.showManageCoinsLiveEvent.observe(viewLifecycleOwner, Observer {
+//            context?.let { ManageWalletsModule.start(it) }
+//        })
+//
+//        router.showExperimentalFeaturesLiveEvent.observe(viewLifecycleOwner, Observer {
+//            activity?.let { ExperimentalFeaturesModule.start(it) }
+//        })
+//
+//        router.openLinkLiveEvent.observe(viewLifecycleOwner, Observer { link ->
+//            val uri = Uri.parse(link)
+//            val intent = Intent(Intent.ACTION_VIEW, uri)
+//            activity?.startActivity(intent)
+//        })
+//
+//        router.shareAppLiveEvent.observe(viewLifecycleOwner, Observer { appWebPageLink ->
+//            val shareMessage = getString(R.string.SettingsShare_Text) + "\n" + appWebPageLink + "\n"
+//            val shareIntent = Intent(Intent.ACTION_SEND)
+//            shareIntent.type = "text/plain"
+//            shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage)
+//            startActivity(Intent.createChooser(shareIntent, getString(R.string.SettingsShare_Title)))
+//        })
+//
+//        router.reloadAppLiveEvent.observe(viewLifecycleOwner, Observer {
+//            activity?.let { MainModule.startAsNewTask(it, MainActivity.SETTINGS_TAB_POSITION) }
+//        })
     }
 }
