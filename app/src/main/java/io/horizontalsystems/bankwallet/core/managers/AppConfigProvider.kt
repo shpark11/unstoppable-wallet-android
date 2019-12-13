@@ -125,8 +125,8 @@ class AppConfigProvider : IAppConfigProvider {
     )
 
     override val predefinedAccountTypes: List<IPredefinedAccountType> = listOf(
-            UnstoppableAccountType(),
-            EosAccountType(),
-            BinanceAccountType()
+            UnstoppableAccountType()
+//            , EosAccountType()
+//            , BinanceAccountType()
     )
 }

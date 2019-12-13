@@ -61,15 +61,15 @@ android {
             applicationIdSuffix ".dev.testnet"
         }
         devMainnetMaster {
-            buildConfigField "boolean", "testMode", "false"
+            buildConfigField "boolean", "testMode", "true"
             applicationIdSuffix ".dev.master"
         }
         devMainnetVersion {
-            buildConfigField "boolean", "testMode", "false"
+            buildConfigField "boolean", "testMode", "true"
             applicationIdSuffix ".dev.version"
         }
         productionMainnet {
-            buildConfigField "boolean", "testMode", "false"
+            buildConfigField "boolean", "testMode", "true"
         }
     }
     compileOptions {
