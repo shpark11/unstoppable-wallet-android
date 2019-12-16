@@ -47,9 +47,9 @@ class BalanceFragment : Fragment(), BalanceCoinAdapter.Listener, BalanceSortDial
         recyclerCoins.layoutManager = NpaLinearLayoutManager(context)
         (recyclerCoins.itemAnimator as? SimpleItemAnimator)?.supportsChangeAnimations = false
 
-        sortButton.setOnClickListener {
-            viewModel.delegate.onSortClick()
-        }
+//        sortButton.setOnClickListener {
+//            viewModel.delegate.onSortClick()
+//        }
 
         pullToRefresh.setOnRefreshListener {
             viewModel.delegate.onRefresh()
@@ -148,9 +148,9 @@ class BalanceFragment : Fragment(), BalanceCoinAdapter.Listener, BalanceSortDial
             BalanceSortDialogFragment.newInstance(this, sortingType).also { it.show(childFragmentManager, it.tag) }
         })
 
-        viewModel.isSortOn.observe(viewLifecycleOwner, Observer { visible ->
-            sortButton.visibility = if (visible) View.VISIBLE else View.GONE
-        })
+//        viewModel.isSortOn.observe(viewLifecycleOwner, Observer { visible ->
+//            sortButton.visibility = if (visible) View.VISIBLE else View.GONE
+//        })
 
         viewModel.showBackupAlert.observe(viewLifecycleOwner, Observer { (coin, predefinedAccount) ->
             activity?.let { activity ->
@@ -176,13 +176,13 @@ class BalanceFragment : Fragment(), BalanceCoinAdapter.Listener, BalanceSortDial
     }
 
     private fun setHeaderViewItem(headerViewItem: BalanceHeaderViewItem) {
-        context?.let {
-            val color = if (headerViewItem.upToDate) R.color.yellow_d else R.color.yellow_50
-            balanceText.setTextColor(ContextCompat.getColor(it, color))
-        }
-
-        balanceText.text = headerViewItem.currencyValue?.let {
-            App.numberFormatter.format(it)
-        }
+//        context?.let {
+//            val color = if (headerViewItem.upToDate) R.color.yellow_d else R.color.yellow_50
+//            balanceText.setTextColor(ContextCompat.getColor(it, color))
+//        }
+//
+//        balanceText.text = headerViewItem.currencyValue?.let {
+//            App.numberFormatter.format(it)
+//        }
     }
 }

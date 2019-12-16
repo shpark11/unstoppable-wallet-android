@@ -50,11 +50,7 @@ class AppConfigProvider : IAppConfigProvider {
     override val featuredCoins: List<Coin>
         get() = listOf(
                 coins[0],
-                coins[1],
-                coins[2],
-                coins[3],
-                coins[4],
-                coins[5]
+                coins[1]
         )
 
     override val coins: List<Coin> = listOf(

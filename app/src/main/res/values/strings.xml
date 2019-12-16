@@ -75,7 +75,7 @@
 
     <!--Balance-->
 
-    <string name="Balance_Title">Assets and Transactions</string>
+    <string name="Balance_Title">Transactions</string>
     <string name="Balance_Deposit">Receive</string>
     <string name="Balance_Send">Send</string>
     <string name="Balance_RatePerCoin">%s per %s</string>
@@ -166,7 +166,7 @@
 
     <!--Transactions-->
 
-    <string name="Transactions_Title">Transactions</string>
+    <string name="Transactions_Title">History</string>
     <string name="Transactions_FilterAll">ALL</string>
     <string name="Transactions_EmptyList">You don\’t have any transactions yet</string>
     <string name="Transactions_Receiving">Receiving</string>
