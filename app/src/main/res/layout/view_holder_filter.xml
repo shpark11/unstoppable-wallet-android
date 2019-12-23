@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<TextView
-    android:id="@+id/filter_text"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/filter_text"
     style="@style/Caption"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="4dp"
-    android:layout_marginEnd="4dp"
     android:layout_marginTop="8dp"
+    android:layout_marginEnd="4dp"
     android:layout_marginBottom="8dp"
-    android:background="@drawable/stateful_tag_bg"
-    android:textColor="?TransactionTagColor"
-    tools:text="BTC"
-    />
+    android:background="#3F6AB5"
+    android:textColor="#000000"
+    tools:text="BTC" />

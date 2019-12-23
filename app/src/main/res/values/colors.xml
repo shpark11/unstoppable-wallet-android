@@ -29,4 +29,11 @@
     <color name="steel_dark">#262830</color>
     <color name="steel_20">#3373798c</color>
     <color name="steel_dark_pressed">#353842</color>
+
+    <color name="light_sky_blue">#FF87CEFA</color>
+    <color name="royal_blue">#FF4169E1</color>
+    <color name="aqua_marine">#FF7FFFD4</color>
+
+    <color name="light_blue">#98B3E2</color>
+    <color name="d_blue">#3F6AB5</color>
 </resources>

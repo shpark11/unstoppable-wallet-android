@@ -38,13 +38,13 @@ class SecuritySettingsActivity : BaseActivity() {
             fingerprint.switchToggle()
         }
 
-        enablePin.switchOnCheckedChangeListener = CompoundButton.OnCheckedChangeListener { _, isChecked ->
-            viewModel.delegate.didSwitchPinSet(isChecked)
-        }
-
-        enablePin.setOnClickListener {
-            enablePin.switchToggle()
-        }
+//        enablePin.switchOnCheckedChangeListener = CompoundButton.OnCheckedChangeListener { _, isChecked ->
+//            viewModel.delegate.didSwitchPinSet(isChecked)
+//        }
+//
+//        enablePin.setOnClickListener {
+//            enablePin.switchToggle()
+//        }
 
         //  Handling view model live events
 
@@ -57,12 +57,12 @@ class SecuritySettingsActivity : BaseActivity() {
         })
 
         viewModel.pinSetLiveData.observe(this, Observer { pinEnabled ->
-            enablePin.switchIsChecked = pinEnabled
+//            enablePin.switchIsChecked = pinEnabled
         })
 
         viewModel.editPinVisibleLiveData.observe(this, Observer { pinEnabled ->
             changePin.visibility = if (pinEnabled) View.VISIBLE else View.GONE
-            enablePin.bottomBorder = !pinEnabled
+//            enablePin.bottomBorder = !pinEnabled
         })
 
         viewModel.openEditPinLiveEvent.observe(this, Observer {

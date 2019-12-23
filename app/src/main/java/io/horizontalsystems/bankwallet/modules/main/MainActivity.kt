@@ -106,11 +106,11 @@ class MainActivity : BaseActivity(), TransactionInfoView.Listener {
         viewPager.setPagingEnabled(true)
         viewPager.adapter = adapter
 
-        LayoutHelper.getAttr(R.attr.BottomNavigationBackgroundColor, theme)
+        val let = LayoutHelper.getAttr(R.attr.BottomNavigationBackgroundColor, theme)
                 ?.let { ahBottomNavigation.defaultBackgroundColor = it }
 
-        ahBottomNavigation.addItem(AHBottomNavigationItem(R.string.Balance_Title, R.drawable.bank_icon, 0))
-        ahBottomNavigation.addItem(AHBottomNavigationItem(R.string.Transactions_Title, R.drawable.transactions, 0))
+        ahBottomNavigation.addItem(AHBottomNavigationItem(R.string.Balance_Title, R.drawable.transactions, 0))
+        ahBottomNavigation.addItem(AHBottomNavigationItem(R.string.Transactions_Title, R.drawable.details_icon, 0))
         ahBottomNavigation.addItem(AHBottomNavigationItem(R.string.Settings_Title, R.drawable.settings, 0))
 
         ahBottomNavigation.accentColor = ContextCompat.getColor(this, R.color.yellow_d)

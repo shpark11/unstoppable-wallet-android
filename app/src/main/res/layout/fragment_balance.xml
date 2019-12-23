@@ -10,6 +10,7 @@
         android:id="@+id/pullToRefresh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#98B3E2"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.recyclerview.widget.RecyclerView
@@ -36,6 +37,7 @@
             android:id="@+id/collapsingToolbar"
             android:layout_width="match_parent"
             android:layout_height="107dp"
+            android:background="#98B3E2"
             app:collapsedTitleTextAppearance="@style/Title3"
             app:elevation="0dp"
             app:expandedTitleMarginBottom="16dp"
@@ -47,22 +49,15 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                android:background="#98B3E2"
                 android:paddingStart="0dp"
                 android:paddingEnd="4dp"
                 app:layout_collapseMode="pin"
                 app:layout_scrollFlags="scroll|enterAlways|snap"
-                app:title="@string/Balance_Title" />
+                app:title="@string/Balance_Title"
+                app:titleTextColor="#000000" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginBottom="8dp"
-            android:orientation="horizontal"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 

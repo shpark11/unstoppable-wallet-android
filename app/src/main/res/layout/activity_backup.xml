@@ -5,7 +5,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#98B3E2">
 
         <TextView
             android:id="@+id/backupTitle"
@@ -16,7 +17,7 @@
             android:layout_marginTop="49dp"
             android:layout_marginEnd="16dp"
             android:text="@string/Backup_Intro_Title"
-            android:textColor="?TitleColor"
+            android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -30,7 +31,7 @@
             android:layout_marginTop="28dp"
             android:layout_marginEnd="32dp"
             android:text="@string/Backup_Intro_Subtitle"
-            android:textColor="@color/grey"
+            android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/backupTitle" />
@@ -45,6 +46,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="32dp"
+        android:background="#3F6AB5"
         android:text="@string/Button_Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonNext"
@@ -59,6 +61,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
+        android:background="#FF7FFFD4"
         android:text="@string/Backup_Button_Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

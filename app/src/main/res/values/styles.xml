@@ -59,59 +59,59 @@
     <!-- Base application theme. -->
     <style name="DarkModeAppTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorAccent">@color/yellow_d</item>
+        <item name="colorAccent">@color/black</item>
         <item name="buttonStyle">@style/Button</item>
-        <item name="android:windowBackground">@color/dark</item>
-        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:windowBackground">@color/light_blue</item>
+        <item name="android:navigationBarColor">@color/light_blue</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="actionMenuTextAppearance">@style/Headline2</item>
         <item name="actionMenuTextColor">?ColorJacob</item>
         <item name="colorControlNormal">@color/grey</item>
-        <item name="colorControlActivated">@color/yellow_d</item>
+        <item name="colorControlActivated">@color/black</item>
         <item name="android:homeAsUpIndicator">@drawable/back</item>
 
-        <item name="BallanceCoinNameColor">@color/white</item>
-        <item name="BallanceCoinAmountColor">@color/white</item>
-        <item name="TitleColor">@color/white</item>
+        <item name="BallanceCoinNameColor">@color/black</item>
+        <item name="BallanceCoinAmountColor">@color/black</item>
+        <item name="TitleColor">@color/black</item>
         <item name="TextDimmable">@color/dimmable_white</item>
-        <item name="TextColorGreyLightToDark">@color/light_grey</item>
-        <item name="TextColorBarsToDark">@color/light</item>
+        <item name="TextColorGreyLightToDark">@color/black</item>
+        <item name="TextColorBarsToDark">@color/black</item>
         <item name="AboutBackgroundColor">@color/transparent</item>
-        <item name="TransactionItemBackgroundColor">@color/transaction_item_background_dark</item>
+        <item name="TransactionItemBackgroundColor">@color/royal_blue</item>
         <item name="CoinItemBackground">@drawable/coinholder_bg</item>
         <item name="PredefinedAccountBackground">@drawable/predefined_account_background_dark</item>
         <item name="ManageKeyBackground">@drawable/manage_key_background_dark</item>
         <item name="FilterButtonBackgroundColor">@color/steel_20</item>
         <item name="AddWalletIcon">@drawable/stateful_balance_add_icon_dark</item>
-        <item name="BottomNavigationBackgroundColor">@color/dark</item>
+        <item name="BottomNavigationBackgroundColor">@color/light_blue</item>
         <item name="RippleColor">@color/ripple_white</item>
         <item name="RoundRippleColor">@color/white_50</item>
         <item name="BottomNavBackground">@drawable/shadow_bottom_navigation</item>
         <item name="BlockScreenLockIcon">@drawable/ic_blocked_dark</item>
-        <item name="HudTextColor">@color/white</item>
-        <item name="TransactionDetailBackground">@color/steel_dark</item>
-        <item name="TransactionDetailValueTextColor">@color/light</item>
-        <item name="TransactionDetailBottomBarBackground">@color/dark</item>
-        <item name="LightBackground">@color/steel_20</item>
-        <item name="BottomSendButtonColor">@color/steel_20</item>
+        <item name="HudTextColor">@color/black</item>
+        <item name="TransactionDetailBackground">@color/royal_blue</item>
+        <item name="TransactionDetailValueTextColor">@color/black</item>
+        <item name="TransactionDetailBottomBarBackground">@color/light_blue</item>
+        <item name="LightBackground">@color/royal_blue</item>
+        <item name="BottomSendButtonColor">@color/royal_blue</item>
         <item name="BottomSendButtonHighlightedColor">@color/grey_50</item>
         <item name="BottomSendImageButtonTint">@color/white</item>
-        <item name="BottomDialogTextColor">@color/white</item>
-        <item name="ConfirmationDialogBackground">@color/steel_dark</item>
-        <item name="AddressBackground">@color/address_background_dark</item>
-        <item name="TransactionTagColor">@color/stateful_tag_filter_text_color_dark</item>
-        <item name="ProgressbarSpinnerColor">@color/dark</item>
-        <item name="SwipeRefreshBackgroundColor">@color/dark</item>
+        <item name="BottomDialogTextColor">@color/black</item>
+        <item name="ConfirmationDialogBackground">@color/royal_blue</item>
+        <item name="AddressBackground">@color/royal_blue</item>
+        <item name="TransactionTagColor">@color/black</item>
+        <item name="ProgressbarSpinnerColor">@color/light_sky_blue</item>
+        <item name="SwipeRefreshBackgroundColor">@color/light_sky_blue</item>
         <item name="InputBackground">@color/steel_20</item>
-        <item name="ConfirmationTextColor">@color/steel_light</item>
-        <item name="AddCoinButtonPlaceholder">@color/steel_dark</item>
+        <item name="ConfirmationTextColor">@color/black</item>
+        <item name="AddCoinButtonPlaceholder">@color/royal_blue</item>
         <item name="ShadingBottomGradient">@drawable/rates_gradient_dark</item>
         <item name="SecondaryButtonStartGradient">#33ffffff</item>
 
         <!-- New colors: for icons & text -->
-        <item name="ColorJacob">@color/yellow_d</item>
-        <item name="ColorJacobPressed">@color/yellow_l</item>
+        <item name="ColorJacob">@color/black</item>
+        <item name="ColorJacobPressed">@color/black</item>
         <item name="ColorRemus">@color/green_d</item>
         <item name="ColorLucian">@color/red_d</item>
         <item name="ColorLucianPressed">@color/red_l</item>
@@ -120,32 +120,32 @@
         <!-- New colors: for backgrounds -->
         <item name="ColorJeremy">@color/steel_20</item>
         <item name="ColorElena">@color/steel_20</item>
-        <item name="ColorLawrence">@color/steel_dark</item>
+        <item name="ColorLawrence">@color/royal_blue</item>
         <item name="ColorLawrencePressed">@color/steel_dark_pressed</item>
-        <item name="ColorClaude">@color/dark</item>
-        <item name="ColorGwen">@color/dark</item>
+        <item name="ColorClaude">@color/royal_blue</item>
+        <item name="ColorGwen">@color/royal_blue</item>
     </style>
 
     <style name="LightModeAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorAccent">@color/yellow_l</item>
+        <item name="colorAccent">@color/aqua_marine</item>
         <item name="buttonStyle">@style/Button</item>
         <item name="android:windowBackground">@drawable/light_gradient_background</item>
-        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@color/light_sky_blue</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:actionMenuTextAppearance">@style/Headline2</item>
         <item name="actionMenuTextColor">?ColorJacob</item>
         <item name="colorControlNormal">@color/grey</item>
-        <item name="colorControlActivated">@color/yellow_l</item>
+        <item name="colorControlActivated">@color/aqua_marine</item>
         <item name="android:homeAsUpIndicator">@drawable/back</item>
 
-        <item name="BallanceCoinNameColor">@color/dark</item>
-        <item name="BallanceCoinAmountColor">@color/dark</item>
+        <item name="BallanceCoinNameColor">@color/black</item>
+        <item name="BallanceCoinAmountColor">@color/black</item>
         <item name="TitleColor">@color/dark</item>
-        <item name="TextDimmable">@color/dimmable_dark</item>
-        <item name="TextColorGreyLightToDark">@color/dark</item>
-        <item name="TextColorBarsToDark">@color/dark</item>
+        <item name="TextDimmable">@color/black</item>
+        <item name="TextColorGreyLightToDark">@color/black</item>
+        <item name="TextColorBarsToDark">@color/black</item>
         <item name="AboutBackgroundColor">@color/white</item>
         <item name="TransactionItemBackgroundColor">@color/transaction_item_background_light</item>
         <item name="CoinItemBackground">@drawable/coinholder_bg_light</item>
@@ -154,43 +154,43 @@
         <item name="FilterButtonBackgroundColor">#efeff4</item>
         <item name="AddWalletIcon">@drawable/stateful_balance_add_icon_light</item>
         <item name="BottomNavigationBackgroundColor">@color/light</item>
-        <item name="RippleColor">@color/ripple_black</item>
+        <item name="RippleColor">@color/black</item>
         <item name="RoundRippleColor">@color/light_grey</item>
         <item name="BottomNavBackground">@drawable/shadow_bottom_navigation_light</item>
         <item name="BlockScreenLockIcon">@drawable/ic_blocked_light</item>
         <item name="TransactionDetailBackground">@color/white</item>
-        <item name="TransactionDetailValueTextColor">@color/dark</item>
+        <item name="TransactionDetailValueTextColor">@color/black</item>
         <item name="TransactionDetailBottomBarBackground">#f5fafafa</item>
         <item name="LightBackground">@color/steel_light</item>
         <item name="BottomSendButtonColor">@color/steel_light</item>
         <item name="BottomSendButtonHighlightedColor">@color/light_grey</item>
-        <item name="BottomSendImageButtonTint">@color/black</item>
-        <item name="BottomDialogTextColor">@color/black</item>
+        <item name="BottomSendImageButtonTint">@color/light_sky_blue</item>
+        <item name="BottomDialogTextColor">@color/light_sky_blue</item>
         <item name="ConfirmationDialogBackground">@color/light</item>
         <item name="AddressBackground">@color/address_background_light</item>
-        <item name="TransactionTagColor">@color/dark</item>
+        <item name="TransactionTagColor">@color/black</item>
         <item name="ProgressbarSpinnerColor">@color/light</item>
         <item name="SwipeRefreshBackgroundColor">@color/light</item>
         <item name="InputBackground">@color/white</item>
-        <item name="ConfirmationTextColor">@color/dark</item>
+        <item name="ConfirmationTextColor">@color/black</item>
         <item name="AddCoinButtonPlaceholder">@color/light</item>
         <item name="ShadingBottomGradient">@drawable/rates_gradient_light</item>
         <item name="SecondaryButtonStartGradient">#ffffffff</item>
 
         <!-- New colors: for icons & text -->
-        <item name="ColorJacob">@color/yellow_l</item>
-        <item name="ColorJacobPressed">@color/yellow_d</item>
+        <item name="ColorJacob">@color/aqua_marine</item>
+        <item name="ColorJacobPressed">@color/aqua_marine</item>
         <item name="ColorRemus">@color/green_l</item>
         <item name="ColorLucian">@color/red_l</item>
         <item name="ColorLucianPressed">@color/red_d</item>
-        <item name="ColorOz">@color/dark</item>
-        <item name="ColorLeah">@color/steel_dark</item>
+        <item name="ColorOz">@color/black</item>
+        <item name="ColorLeah">@color/black</item>
         <!-- New colors: for backgrounds -->
         <item name="ColorJeremy">@color/steel_light</item>
         <item name="ColorElena">@color/light_grey</item>
-        <item name="ColorLawrence">@color/white</item>
+        <item name="ColorLawrence">@color/black</item>
         <item name="ColorLawrencePressed">@color/white_pressed</item>
-        <item name="ColorClaude">@color/white</item>
+        <item name="ColorClaude">@color/black</item>
         <item name="ColorGwen">@drawable/light_gradient_background</item>
     </style>
 
@@ -257,7 +257,7 @@
     </style>
 
     <style name="Title2R">
-        <item name="android:fontFamily">@font/noto_sans_regular</item>
+        <item name="android:fontFamily">@font/noto_sans_bold</item>
         <item name="android:textSize">32sp</item>
     </style>
 

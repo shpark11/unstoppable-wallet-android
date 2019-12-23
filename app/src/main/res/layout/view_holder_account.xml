@@ -6,11 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="1dp"
-    android:background="?ManageKeyBackground"
+    android:background="#3F6AB5"
     android:orientation="vertical"
     android:padding="8dp">
 
     <!-- First line-->
+
+    <!-- Second line-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,33 +20,21 @@
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp">
 
-        <ImageView
-            android:id="@+id/keyIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:indeterminateTint="@color/grey"
-            android:indeterminateTintMode="src_atop"
-            android:src="@drawable/ic_manage_keys"
-            android:tint="@color/dimmable_color_jacob"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/accountName"
             style="@style/Headline2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:textColor="?TextDimmable"
+            android:layout_marginStart="16dp"
+            android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/keyIcon"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             tools:text="Bitcoin" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!-- Second line-->
 
     <TextView
         android:id="@+id/accountCoins"
@@ -55,7 +45,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
         android:includeFontPadding="false"
-        android:textColor="@color/dimmable_grey"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="BTC, BCH, DASH, ETH, ERC-20" />
@@ -77,21 +67,23 @@
             style="@style/ButtonSecondary"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:minHeight="32dp"
             android:layout_marginStart="4dp"
             android:layout_marginEnd="4dp"
             android:layout_weight="1"
-            android:text="@string/ManageKeys_Create" />
+            android:background="#FF7FFFD4"
+            android:minHeight="32dp"
+            android:text="@string/ManageKeys_Create"
+            android:textColor="#000000" />
 
         <Button
             android:id="@+id/buttonImport"
             style="@style/ButtonSecondary"
             android:layout_width="0dp"
-            android:minHeight="32dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_marginEnd="4dp"
             android:layout_weight="1"
+            android:minHeight="32dp"
             android:text="@string/ManageKeys_Restore"
             android:visibility="gone" />
 
@@ -101,9 +93,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:minHeight="32dp"
             android:layout_marginEnd="4dp"
             android:layout_weight="1"
+            android:minHeight="32dp"
             android:text="@string/ManageKeys_Delete"
             android:visibility="gone" />
 
@@ -112,10 +104,10 @@
             style="@style/ButtonSecondary"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:minHeight="32dp"
             android:layout_marginStart="4dp"
             android:layout_marginEnd="4dp"
             android:layout_weight="1"
+            android:minHeight="32dp"
             android:text="@string/ManageKeys_Show"
             android:visibility="gone" />
 
@@ -123,23 +115,12 @@
             android:id="@+id/buttonBackup"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:minHeight="32dp"
             android:layout_marginStart="4dp"
             android:layout_marginEnd="4dp"
-            android:background="@drawable/button_secondary_background"
             android:layout_weight="1"
+            android:background="#FF7FFFD4"
+            android:minHeight="32dp"
             android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="17dp"
-                android:paddingEnd="4dp"
-                android:paddingStart="4dp"
-                android:src="@drawable/ic_attention"
-                android:tint="?ColorLucian"
-                app:layout_constraintEnd_toStartOf="@+id/imageButtonText"
-                app:layout_constraintTop_toTopOf="@+id/imageButtonText"
-                app:layout_constraintBottom_toBottomOf="@+id/imageButtonText"/>
 
             <TextView
                 android:id="@+id/imageButtonText"
@@ -147,13 +128,13 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/noto_sans_medium"
                 android:includeFontPadding="false"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/ManageKeys_Backup"
-                android:textColor="@color/button_secondary_text_color_selector"
-                android:textSize="14sp" />
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

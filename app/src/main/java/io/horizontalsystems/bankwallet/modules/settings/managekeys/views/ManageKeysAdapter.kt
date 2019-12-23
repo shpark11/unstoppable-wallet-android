@@ -84,8 +84,8 @@ class ManageKeysAdapter(private val viewModel: ManageKeysViewModel) : RecyclerVi
             accountName.isEnabled = isEnabled
             accountCoins.isEnabled = isEnabled
 
-            keyIcon.isEnabled = isEnabled
-            keyIcon.alpha = if (isEnabled) 1F else 0.25F
+//            keyIcon.isEnabled = isEnabled
+//            keyIcon.alpha = if (isEnabled) 1F else 0.25F
         }
     }
 

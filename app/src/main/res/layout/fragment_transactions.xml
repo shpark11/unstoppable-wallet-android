@@ -10,7 +10,7 @@
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/transparent"
+        android:background="@color/light_blue"
         app:elevation="0dp">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -30,7 +30,8 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 app:layout_scrollFlags="scroll|enterAlways|snap"
-                app:title="@string/Transactions_Title" />
+                app:title="@string/Transactions_Title"
+                app:titleTextColor="#000000" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -53,6 +54,7 @@
         android:id="@+id/recyclerTransactions"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/light_blue"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:itemCount="4"
         tools:listitem="@layout/view_holder_transaction" />

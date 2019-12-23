@@ -19,6 +19,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?android:attr/actionBarSize"
+            android:background="#98B3E2"
             android:theme="@style/ToolbarStyle"
             app:titleMarginStart="16dp"
             app:titleTextAppearance="@style/Title3"

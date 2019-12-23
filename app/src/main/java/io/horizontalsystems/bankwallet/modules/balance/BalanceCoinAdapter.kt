@@ -130,20 +130,20 @@ class ViewHolderCoin(override val containerView: View) : RecyclerView.ViewHolder
         buttonPay.isEnabled = false
         buttonReceive.isEnabled = true
         imgSyncFailed.visibility = View.INVISIBLE
-        iconProgress.visibility = View.INVISIBLE
+//        iconProgress.visibility = View.INVISIBLE
 
         balanceViewItem.state.let { adapterState ->
             when (adapterState) {
                 is AdapterState.NotReady -> {
                     syncing = true
-                    iconProgress.visibility = View.VISIBLE
+//                    iconProgress.visibility = View.VISIBLE
 //                    textProgress.text = containerView.context.getString(R.string.Balance_Syncing)
                     buttonReceive.isEnabled = false
                 }
                 is AdapterState.Syncing -> {
                     syncing = true
-                    iconProgress.visibility = View.VISIBLE
-                    iconProgress.setProgress(adapterState.progress.toFloat())
+//                    iconProgress.visibility = View.VISIBLE
+//                    iconProgress.setProgress(adapterState.progress.toFloat())
 
 //                    textSyncedUntil.text = adapte
 //                        containerView.context.getString(R.string.Balance_SyncedUntil, DateHelper.formatDate(it, rState.lastBlockDate?.let {"MMM d.yyyy"))
